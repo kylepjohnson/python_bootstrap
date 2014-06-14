@@ -16,6 +16,11 @@ chmod +x install_ubuntu_14.sh
 ./install_ubuntu_14.sh
 ```
 
+To test if installation was successful, create a vitual environment (`pyvenv venv`), enable it (`source venv/bin/activate`), and check the version (`python --version`).
+
+Contribute
+----------
+Pull requests are always welcome. If you would like to modify this script for other OS, please feel free. 
 
 LICENSE
 -------
