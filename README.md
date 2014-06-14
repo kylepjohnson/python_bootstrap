@@ -2,7 +2,18 @@ About
 -----
 This is a shell script for an automated build of the latest version of Python 3 (3.4.1) on the latest LTS version of Ubuntu (14.04). All prerequisite software is installed and all default Python features are enabled.
 
-This build was created and tested on [Ubuntu's own Vagrant box, available at vagrantbox.es](http://www.vagrantbox.es/), though it should work in all Ubuntu 14.04 environmens.
+This build was created and tested on [Ubuntu's own Vagrant box, available at vagrantbox.es](http://www.vagrantbox.es/), though it should work in all Ubuntu 14.04 environments.
+
+Use
+---
+The simplest workflow for a fresh install, without git yet installed, is:
+
+``` bash
+wget https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install_ubuntu_14.sh
+
+./install_ubuntu_14.sh
+```
+
 
 LICENSE
 -------
