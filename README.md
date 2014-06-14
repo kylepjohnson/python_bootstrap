@@ -9,7 +9,7 @@ Use
 The simplest workflow for a fresh install, without git yet installed, is:
 
 ``` bash
-wget https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install_ubuntu_14.sh
+curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install_ubuntu_14.sh
 
 ./install_ubuntu_14.sh
 ```
