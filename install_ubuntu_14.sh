@@ -7,7 +7,7 @@ sudo apt-get -y upgrade
 ##################
 # INSTALL BASICS #
 ##################
-sudo apt-get install git
+sudo apt-get -y install git
 
 ##################
 # INSTALL PYTHON #
