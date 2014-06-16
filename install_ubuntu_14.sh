@@ -24,7 +24,7 @@ sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 
-# fetch and install Python 3.4.0 source
+# fetch and install Python 3.4 source
 cd /tmp
 wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
 tar xvf Python-3.4.1.tar.xz
