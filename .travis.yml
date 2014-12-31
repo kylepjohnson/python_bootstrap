@@ -4,3 +4,4 @@ script:
   - ./ubuntu14.sh no-update
   - pyvenv venv
   - source venv/bin/activate
+  - python --version
