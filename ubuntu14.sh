@@ -3,9 +3,7 @@
 ######################
 # UPDATE AND UPGRADE #
 ######################
-#sudo apt-get update
-
-# do not run upgrade if argument passed, as on travis build
+# if argument does not exist (as for user build), update aptitude; else do not
 if [ -z "$1" ]
 then
   echo "update apt-get"
@@ -14,7 +12,6 @@ then
 else
   echo "do not update apt-get"
 fi
-#sudo apt-get -y upgrade
 
 ##################
 # INSTALL BASICS #
