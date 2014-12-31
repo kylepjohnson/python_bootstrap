@@ -1,0 +1,11 @@
+language: python
+
+python:
+  - "3.4"
+
+script:
+  - curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/ubuntu14.sh
+  - chmod +x ubuntu14.sh
+  - ./ubuntu14.sh
+  - pyvenv venv
+  - source venv/bin/activate
