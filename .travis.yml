@@ -6,6 +6,6 @@ python:
 script:
   - curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/ubuntu14.sh
   - chmod +x ubuntu14.sh
-  - ./ubuntu14.sh
+  - ./ubuntu14.sh no-update
   - pyvenv venv
   - source venv/bin/activate

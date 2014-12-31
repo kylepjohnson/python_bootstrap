@@ -1,7 +1,19 @@
+#!/bin/bash
+
 ######################
 # UPDATE AND UPGRADE #
 ######################
-sudo apt-get update
+#sudo apt-get update
+
+# do not run upgrade if argument passed, as on travis build
+if [ -z "$1" ]
+then
+  echo "update apt-get"
+  sudo apt-get update
+  sudo apt-get -y upgrade
+else
+  echo "do not update apt-get"
+fi
 #sudo apt-get -y upgrade
 
 ##################
