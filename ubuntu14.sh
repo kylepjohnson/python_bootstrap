@@ -2,7 +2,7 @@
 # UPDATE AND UPGRADE #
 ######################
 sudo apt-get update
-sudo apt-get -y upgrade
+#sudo apt-get -y upgrade
 
 ##################
 # INSTALL BASICS #
