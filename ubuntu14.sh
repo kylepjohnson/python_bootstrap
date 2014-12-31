@@ -26,16 +26,16 @@ sudo apt-get -y install tk8.5-dev
 
 # fetch and install Python 3.4 source
 cd /tmp
-wget https://www.python.org/ftp/python/3.4.1/Python-3.4.1.tar.xz
-tar xvf Python-3.4.1.tar.xz
+wget https://www.python.org/ftp/python/3.4.2/Python-3.4.2.tar.xz
+tar xvf Python-3.4.2.tar.xz
 
 #make and install
-cd /tmp/Python-3.4.1
+cd /tmp/Python-3.4.2
 ./configure
 make
 sudo make install
 
 # cleanup
 cd /tmp
-rm Python-3.4.1.tar.xz
-sudo rm -rf Python-3.4.1
+rm Python-3.4.2.tar.xz
+sudo rm -rf Python-3.4.2
