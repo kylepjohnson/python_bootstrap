@@ -21,7 +21,7 @@ sudo apt-get -y install git
 ##################
 # INSTALL PYTHON #
 ##################
-# install dependencies for all Python 3.4 modules
+# install dependencies for all Python 3.5 modules
 sudo apt-get -y install build-essential
 sudo apt-get -y install bzip2
 sudo apt-get -y install libbz2-dev
@@ -33,18 +33,18 @@ sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 
-# fetch and install Python 3.4 source
+# fetch and install Python 3.5 source
 cd /tmp
-wget https://www.python.org/ftp/python/3.4.3/Python-3.4.3.tar.xz
-tar xvf Python-3.4.3.tar.xz
+wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tar.xz
+tar xvf Python-3.5.0.tar.xz
 
 #make and install
-cd /tmp/Python-3.4.3
+cd /tmp/Python-3.5.0
 ./configure
 make
 sudo make install
 
 # cleanup
 cd /tmp
-rm Python-3.4.3.tar.xz
-sudo rm -rf Python-3.4.3
+rm Python-3.5.0.tar.xz
+sudo rm -rf Python-3.5.0
