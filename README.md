@@ -11,7 +11,7 @@ Use
 The simplest workflow for a fresh install, without git yet installed, is:
 
 ``` bash
-curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/ubuntu14.sh
+curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install.sh
 
 chmod +x ubuntu14.sh
 
