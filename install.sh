@@ -35,16 +35,16 @@ sudo apt-get -y install tk8.5-dev
 
 # fetch and install Python source
 cd /tmp
-wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tar.xz
-tar xvf Python-3.5.1.tar.xz
+wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz
+tar xvf Python-3.5.2.tar.xz
 
 #make and install
-cd /tmp/Python-3.5.1
+cd /tmp/Python-3.5.2
 ./configure
 make
 sudo make install
 
 # cleanup
 cd /tmp
-rm Python-3.5.1.tar.xz
-sudo rm -rf Python-3.5.1
+rm Python-3.5.2.tar.xz
+sudo rm -rf Python-3.5.2
