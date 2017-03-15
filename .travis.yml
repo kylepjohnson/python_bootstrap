@@ -2,6 +2,6 @@ script:
   - curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install.sh
   - chmod +x install.sh
   - ./install.sh no-update
-  - pyvenv venv
+  - python3.6 -m venv venv
   - source venv/bin/activate
   - python --version
