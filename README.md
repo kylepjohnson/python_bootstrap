@@ -2,9 +2,9 @@
 
 About
 -----
-This is a shell script for an automated build of the latest version of Python 3 (3.5.2) on the latest LTS version of Ubuntu (14.04). All prerequisite software is installed and all default Python features are enabled.
+This is a shell script for an automated build of the latest version of Python 3 (3.6.0) on the latest LTS version of Ubuntu (16.04). All prerequisite software is installed and all default Python features are enabled.
 
-This build was created and tested on [Ubuntu's own Vagrant box, available at vagrantbox.es](http://www.vagrantbox.es/). It should work in all Ubuntu 14.04 environments.
+This build was created and tested on [Ubuntu's own Vagrant box, available at vagrantbox.es](http://www.vagrantbox.es/). It should work in all Ubuntu 16.04 environments.
 
 Use
 ---
@@ -18,7 +18,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-To test if installation was successful, create a vitual environment (`pyvenv venv`), enable it (`source venv/bin/activate`), and check the version (`python --version`).
+To test if installation was successful, create a vitual environment (`python -m venv venv-name`), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
 
 Contribute
 ----------
