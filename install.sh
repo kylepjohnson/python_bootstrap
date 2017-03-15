@@ -21,7 +21,7 @@ sudo apt-get -y install git
 ##################
 # INSTALL PYTHON #
 ##################
-# install dependencies for all Python 3.5 modules
+# install dependencies for all Python 3.6 modules
 sudo apt-get -y install build-essential
 sudo apt-get -y install bzip2
 sudo apt-get -y install libbz2-dev
@@ -35,16 +35,16 @@ sudo apt-get -y install tk8.5-dev
 
 # fetch and install Python source
 cd /tmp
-wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz
-tar xvf Python-3.5.2.tar.xz
+wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
+tar xvf Python-3.6.0.tar.xz
 
 #make and install
-cd /tmp/Python-3.5.2
+cd /tmp/Python-3.6.6
 ./configure
 make
 sudo make install
 
 # cleanup
 cd /tmp
-rm Python-3.5.2.tar.xz
-sudo rm -rf Python-3.5.2
+rm Python-3.6.0.tar.xz
+sudo rm -rf Python-3.6.0
