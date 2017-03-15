@@ -39,7 +39,7 @@ wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
 tar xvf Python-3.6.0.tar.xz
 
 #make and install
-cd /tmp/Python-3.6.6
+cd /tmp/Python-3.6.0
 ./configure
 make
 sudo make install
