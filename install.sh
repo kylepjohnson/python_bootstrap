@@ -35,16 +35,16 @@ sudo apt-get -y install tk8.5-dev
 
 # fetch and install Python source
 cd /tmp
-wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
-tar xvf Python-3.6.0.tar.xz
+wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
+tar xvf Python-3.6.1.tar.xz
 
 #make and install
-cd /tmp/Python-3.6.0
+cd /tmp/Python-3.6.1
 ./configure
 make
 sudo make install
 
 # cleanup
 cd /tmp
-rm Python-3.6.0.tar.xz
-sudo rm -rf Python-3.6.0
+rm Python-3.6.1.tar.xz
+sudo rm -rf Python-3.6.1
