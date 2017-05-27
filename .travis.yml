@@ -7,7 +7,7 @@ script:
   - python --version
   - deactivate
 
-  - ./install.sh 2
-  - virtualenv venv2
-  - source venv2/bin/activate
-  - python --version
+#  - ./install.sh 2
+#  - virtualenv venv2
+#  - source venv2/bin/activate
+#  - python --version
