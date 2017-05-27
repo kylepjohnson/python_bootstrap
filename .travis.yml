@@ -8,7 +8,7 @@ script:
   - python3.6 -m venv venv
   - source venv3/bin/activate
   - python --version
-  - deactivate
+  #- deactivate
 
 #  - ./install.sh 2
 #  - virtualenv venv2
