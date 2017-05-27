@@ -1,3 +1,6 @@
+dist: trusty
+sudo: required
+
 script:
   - curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install.sh
   - chmod +x install.sh
