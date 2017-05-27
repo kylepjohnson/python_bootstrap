@@ -60,10 +60,6 @@ sudo rm -rf Python-2.7.13
 sudo python2.7 -m ensurepip
 sudo /usr/local/bin/pip install virtualenv
 
-# mk virtualenv and test
-virtualenv venv27
-source venv27/bin/activate
-
 
 elif [ $1 == "3" ]
 then
