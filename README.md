@@ -1,4 +1,4 @@
-[![Build Status](http://img.shields.io/travis/kylepjohnson/python3_bootstrap.svg?style=flat)](https://travis-ci.org/kylepjohnson/python3_bootstrap)
+[![Build Status](http://img.shields.io/travis/kylepjohnson/python_bootstrap.svg?style=flat)](https://travis-ci.org/kylepjohnson/python_bootstrap)
 
 About
 -----
