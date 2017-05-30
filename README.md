@@ -2,7 +2,7 @@
 
 About
 -----
-This is a shell script for an automated build of the latest version of Python 3 (3.6.x) on the latest LTS version of Ubuntu (16.04). All prerequisite software is installed and all default Python features are enabled.
+This is a shell script for an automated build of the latest version of Python 2 (2.7.x) or 3 (3.6.x) on an LTS version of Ubuntu (the build server on Travis CI currently uses 14.04). All prerequisite software is installed and all default Python features are enabled.
 
 Use
 ---
@@ -13,8 +13,10 @@ curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/
 
 chmod +x install.sh
 
-./install.sh
+./install.sh 3
 ```
+
+To get Python 2, run `./install.sh 2` instead.
 
 To test if installation was successful, create a vitual environment (`python -m venv venv-name`), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
 
