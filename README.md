@@ -18,7 +18,7 @@ chmod +x install.sh
 
 To get Python 2, run `./install.sh 2` instead.
 
-To test if installation was successful, create a vitual environment (`python -m venv venv-name`), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
+To test if installation was successful, create a vitual environment (`python3.6 -m venv venv-name`, for Python 3), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
 
 Contribute
 ----------
