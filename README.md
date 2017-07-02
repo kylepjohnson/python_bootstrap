@@ -16,7 +16,7 @@ chmod +x install.sh
 ./install.sh 3
 ```
 
-To get Python 2, run `./install.sh 2` instead.
+To get Python 2, run `./install.sh 2` instead. For optimized builds (i.e., to build with `./configure --enable-optimizations`), add the flag "optimize" after (e.g., `./install 3 optimize`). This slows the build down significantly however can offer runtime improvements of 10-20% ([source](https://stackoverflow.com/a/41408261)).
 
 To test if installation was successful, create a vitual environment (`python3.6 -m venv venv-name`, for Python 3), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
 
