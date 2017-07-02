@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ######################
 # UPDATE AND UPGRADE #
 ######################
@@ -33,8 +34,38 @@ sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 
-# fetch and install Python source
+
 cd /tmp
+
+if [ $1 == "2" ]
+then
+  echo "Installing Python 2.x"
+
+# fetch and install Python source
+wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tar.xz
+tar xvf Python-2.7.13.tar.xz
+
+#make and install
+cd Python-2.7.13
+./configure --enable-optimizations
+make
+sudo make install
+
+# cleanup
+cd /tmp
+rm Python-2.7.13.tar.xz
+sudo rm -rf Python-2.7.13
+
+# install pip + virtualenv
+sudo python2.7 -m ensurepip
+sudo /usr/local/bin/pip install virtualenv
+
+
+elif [ $1 == "3" ]
+then
+  echo "Installing Python 3.x"
+
+# fetch and install Python source
 wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
 tar xvf Python-3.6.1.tar.xz
 
@@ -48,3 +79,8 @@ sudo make install
 cd /tmp
 rm Python-3.6.1.tar.xz
 sudo rm -rf Python-3.6.1
+
+else
+  echo "Choose '2' or '3'."
+fi
+

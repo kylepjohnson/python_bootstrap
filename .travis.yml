@@ -1,7 +1,16 @@
+dist: trusty
+sudo: required
+
 script:
   - curl -O https://raw.githubusercontent.com/kylepjohnson/python3_bootstrap/master/install.sh
   - chmod +x install.sh
-  - ./install.sh no-update
-  - python3.6 -m venv venv
-  - source venv/bin/activate
+  - ./install.sh 3
+  - python3.6 -m venv venv3
+  - source venv3/bin/activate
+  - python --version
+  - deactivate
+
+  - ./install.sh 2
+  - virtualenv venv2
+  - source venv2/bin/activate
   - python --version
