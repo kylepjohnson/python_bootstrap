@@ -64,11 +64,11 @@ then
   echo "Installing Python 3.x"
 
   # fetch and install Python source
-  wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tar.xz
-  tar xvf Python-3.6.1.tar.xz
+  wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+  tar xvf Python-3.6.2.tar.xz
 
   #make and install
-  cd /tmp/Python-3.6.1
+  cd /tmp/Python-3.6.2
   if [ $2 == "optimize" ]
   then
     ./configure --enable-optimizations
@@ -80,8 +80,8 @@ then
 
   # cleanup
   cd /tmp
-  rm Python-3.6.1.tar.xz
-  sudo rm -rf Python-3.6.1
+  rm Python-3.6.2.tar.xz
+  sudo rm -rf Python-3.6.2
 
 else
   echo "Choose '2' or '3'."
