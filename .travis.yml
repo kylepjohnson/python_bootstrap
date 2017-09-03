@@ -14,3 +14,7 @@ script:
   - virtualenv venv2
   - source venv2/bin/activate
   - python --version
+  - /usr/local/bin/virtualenv venv2
+  - source venv2/bib/activate
+  - python --version
+  - deactivate
