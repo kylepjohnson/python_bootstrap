@@ -26,6 +26,7 @@ sudo apt-get -y install liblzma-dev
 sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
+sudo apt-get -y install libffi-dev
 
 
 cd /tmp
@@ -35,11 +36,11 @@ then
   echo "Installing Python 2.x"
 
   # fetch and install Python source
-  wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tar.xz
-  tar xvf Python-2.7.14.tar.xz
+  wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tar.xz
+  tar xvf Python-2.7.15.tar.xz
 
   #make and install
-  cd Python-2.7.14
+  cd Python-2.7.15
   if [ $2 == "optimize" ] 
   then
     ./configure --enable-optimizations
@@ -51,8 +52,8 @@ then
 
   # cleanup
   cd /tmp
-  rm Python-2.7.14.tar.xz
-  sudo rm -rf Python-2.7.14
+  rm Python-2.7.15.tar.xz
+  sudo rm -rf Python-2.7.15
 
   # install pip + virtualenv
   sudo python2.7 -m ensurepip
@@ -64,11 +65,11 @@ then
   echo "Installing Python 3.x"
 
   # fetch and install Python source
-  wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tar.xz
-  tar xvf Python-3.6.4.tar.xz
+  wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
+  tar xvf Python-3.7.0.tar.xz
 
   #make and install
-  cd /tmp/Python-3.6.4
+  cd /tmp/Python-3.7.0
   if [ $2 == "optimize" ]
   then
     ./configure --enable-optimizations
@@ -80,8 +81,8 @@ then
 
   # cleanup
   cd /tmp
-  rm Python-3.6.4.tar.xz
-  sudo rm -rf Python-3.6.4
+  rm Python-3.7.0.tar.xz
+  sudo rm -rf Python-3.7.0
 
 else
   echo "Choose '2' or '3'."
