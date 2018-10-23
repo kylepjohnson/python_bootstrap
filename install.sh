@@ -28,6 +28,8 @@ sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 sudo apt-get -y install libffi-dev
 
+py2ver=2.7.15
+py3ver=3.7.0
 
 cd /tmp
 
@@ -36,11 +38,11 @@ then
   echo "Installing Python 2.x"
 
   # fetch and install Python source
-  wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tar.xz
-  tar xvf Python-2.7.15.tar.xz
+  wget https://www.python.org/ftp/python/$py2ver/Python-$py2ver.tar.xz
+  tar xvf Python-$py2ver.tar.xz
 
   #make and install
-  cd Python-2.7.15
+  cd Python-$py2ver
   if [ $2 == "optimize" ] 
   then
     ./configure --enable-optimizations
@@ -52,8 +54,8 @@ then
 
   # cleanup
   cd /tmp
-  rm Python-2.7.15.tar.xz
-  sudo rm -rf Python-2.7.15
+  rm Python-$py2ver.tar.xz
+  sudo rm -rf Python-$py2ver
 
   # install pip + virtualenv
   sudo python2.7 -m ensurepip
