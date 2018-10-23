@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# TODO: Build on more recent versions of Ubuntu on TravisCI
+# TODO: Autodetect Ubuntu or RHEL?
+# TODO: Improve the commandline arguments for optimization
+# TODO: Check for latest version online, then install that (no more version declaration)
+# TODO: Provide specific version as arg and fetch/build that
+
 ###################
 # DEFINE VERSIONS #
 ###################
@@ -9,9 +15,10 @@ latestPy3=3.7.1
 ###################
 # CHECK ARGUMENTS #
 ###################
+# for version
 if [ -z "$1" ]
-  then
-    echo "No argument supplied. Selecting Python 3."
+then
+    echo "Argument 1: No argument supplied. Selecting Python 3."
     pyVersionArg=3
     pyVersion=$latestPy3
 elif [ $1 == "2" ]
@@ -25,9 +32,22 @@ then
   pyVersionArg=3
   pyVersion=$latestPy3
 else
-  echo "Invalid argument. Choose 2 or 3."
+  echo "Argument 1: Invalid argument. Choose 2 or 3."
   echo "Exiting"
   exit 1
+fi
+
+# for optimized build
+if [ -z "$2" ]
+then
+  echo "Argument 2: No argument supplied for optimizing build. Not optimizing."
+  do_Optimize=false
+elif [ $2 == "optimize" ]
+then
+  do_Optimize=true
+  echo "Argument 2: Optimizations chosen."
+else
+  do_Optimize=false
 fi
 
 ######################
@@ -41,9 +61,9 @@ sudo apt-get -y upgrade
 ##################
 sudo apt-get -y install git
 
-##################
-# INSTALL PYTHON #
-##################
+########################
+# INSTALL DEPENDENCIES #
+########################
 # install dependencies for all Python 3.6 modules
 sudo apt-get -y install build-essential
 sudo apt-get -y install bzip2
@@ -57,28 +77,30 @@ sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 sudo apt-get -y install libffi-dev
 
+################
+# BUILD PYTHON #
+################
 cd /tmp
-
 # fetch and install Python source
 wget https://www.python.org/ftp/python/$pyVersion/Python-$pyVersion.tar.xz
 tar xvf Python-$pyVersion.tar.xz
-
 #make and install
 cd /tmp/Python-$pyVersion
-if [ $2 == "optimize" ]
+if [ $do_Optimize == true ]
 then
-./configure --enable-optimizations
+  echo "Building with optimizations ..."
+  ./configure --enable-optimizations
 else
-./configure
+  echo "Building without optimizations ..."
+  ./configure
 fi
 make
 sudo make install
-
 # cleanup
 cd /tmp
 rm Python-$pyVersion.tar.xz
 sudo rm -rf Python-$pyVersion
-
+# version-specific installation steps
 if [ $pyVersionArg == 2 ]
 then
   # install pip + virtualenv
