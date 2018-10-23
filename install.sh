@@ -1,5 +1,25 @@
 #!/bin/bash
 
+py2ver=2.7.15
+py3ver=3.7.1
+
+if [ -z "$1" ]
+  then
+    echo "No argument supplied. Selecting Python 3."
+    pyVersion=3
+elif [ $1 == "2" ]
+then
+  echo "Installing Python 2.x"
+  pyVersion=2
+elif [ $1 == "3" ]
+then
+  echo "Installing Python 3.x"
+  pyVersion=3
+else
+  echo "Invalid argument. Choose 2 or 3."
+  echo "Exiting"
+  exit 1
+fi
 
 ######################
 # UPDATE AND UPGRADE #
@@ -28,14 +48,10 @@ sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 sudo apt-get -y install libffi-dev
 
-py2ver=2.7.15
-py3ver=3.7.1
-
 cd /tmp
 
-if [ $1 == "2" ]
+if [ $pyVersion == 2 ]
 then
-  echo "Installing Python 2.x"
 
   # fetch and install Python source
   wget https://www.python.org/ftp/python/$py2ver/Python-$py2ver.tar.xz
@@ -61,10 +77,8 @@ then
   sudo python2.7 -m ensurepip
   sudo /usr/local/bin/pip install virtualenv
 
-
-elif [ $1 == "3" ]
+elif [ $pyVersion == 3 ]
 then
-  echo "Installing Python 3.x"
 
   # fetch and install Python source
   wget https://www.python.org/ftp/python/$py3ver/Python-$py3ver.tar.xz
@@ -86,7 +100,5 @@ then
   rm Python-$py3ver.tar.xz
   sudo rm -rf Python-$py3ver
 
-else
-  echo "Choose '2' or '3'."
 fi
 
