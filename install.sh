@@ -29,7 +29,7 @@ sudo apt-get -y install tk8.5-dev
 sudo apt-get -y install libffi-dev
 
 py2ver=2.7.15
-py3ver=3.7.0
+py3ver=3.7.1
 
 cd /tmp
 
