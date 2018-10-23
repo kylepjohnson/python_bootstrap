@@ -59,52 +59,29 @@ sudo apt-get -y install libffi-dev
 
 cd /tmp
 
+# fetch and install Python source
+wget https://www.python.org/ftp/python/$pyVersion/Python-$pyVersion.tar.xz
+tar xvf Python-$pyVersion.tar.xz
+
+#make and install
+cd /tmp/Python-$pyVersion
+if [ $2 == "optimize" ]
+then
+./configure --enable-optimizations
+else
+./configure
+fi
+make
+sudo make install
+
+# cleanup
+cd /tmp
+rm Python-$pyVersion.tar.xz
+sudo rm -rf Python-$pyVersion
+
 if [ $pyVersionArg == 2 ]
 then
-  # fetch and install Python source
-  wget https://www.python.org/ftp/python/$pyVersion/Python-$pyVersion.tar.xz
-  tar xvf Python-$pyVersion.tar.xz
-
-  #make and install
-  cd Python-$pyVersion
-  if [ $2 == "optimize" ] 
-  then
-    ./configure --enable-optimizations
-  else
-    ./configure
-  fi
-  make
-  sudo make install
-
-  # cleanup
-  cd /tmp
-  rm Python-$pyVersion.tar.xz
-  sudo rm -rf Python-$pyVersion
-
   # install pip + virtualenv
   sudo python2.7 -m ensurepip
   sudo /usr/local/bin/pip install virtualenv
-
-elif [ $pyVersionArg == 3 ]
-then
-  # fetch and install Python source
-  wget https://www.python.org/ftp/python/$pyVersion/Python-$pyVersion.tar.xz
-  tar xvf Python-$pyVersion.tar.xz
-
-  #make and install
-  cd /tmp/Python-$pyVersion
-  if [ $2 == "optimize" ]
-  then
-    ./configure --enable-optimizations
-  else
-    ./configure
-  fi
-  make
-  sudo make install
-
-  # cleanup
-  cd /tmp
-  rm Python-$pyVersion.tar.xz
-  sudo rm -rf Python-$pyVersion
 fi
-
