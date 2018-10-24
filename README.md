@@ -3,7 +3,7 @@
 
 About
 -----
-This is a shell script for an automated build of the latest version of Python 2 or 3 on an LTS version of Ubuntu (the build server on Travis CI currently uses 14.04). All prerequisite software is installed and all default Python features are enabled.
+This is a shell script for an automated build of the latest version of Python 2 or 3 on the latest LTS version of Ubuntu (currently, 18.04). All prerequisite software is installed and all default Python features are enabled.
 
 Use
 ---

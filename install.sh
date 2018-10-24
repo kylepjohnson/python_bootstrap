@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# TODO: Build on Ubuntu 18 on TravisCI
 # TODO: Autodetect Ubuntu or RHEL?
 # TODO: Improve the commandline arguments for optimization
 # TODO: Check for latest version online, then install that (no more version declaration)
