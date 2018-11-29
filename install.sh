@@ -63,7 +63,7 @@ sudo apt-get -y install git
 ########################
 # INSTALL DEPENDENCIES #
 ########################
-# install dependencies for all Python 3.6 modules
+# install dependencies for all Python 3.x modules
 sudo apt-get -y install build-essential
 sudo apt-get -y install bzip2
 sudo apt-get -y install libbz2-dev

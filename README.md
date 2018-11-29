@@ -26,7 +26,7 @@ For optimized builds (i.e., to build with `./configure --enable-optimizations`),
 ./install.sh 2 optimize  # installs Python 2 optimize  # speeds code, but slower installation
 ```
 
-To test if installation was successful, create a vitual environment (`python3.6 -m venv venv-name`, for Python 3), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
+To test if installation was successful, create a vitual environment (`python3.7 -m venv venv-name`, for Python 3), enable it (`source venv-name/bin/activate`), and check the version (`python --version`).
 
 
 LICENSE
