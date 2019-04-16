@@ -8,8 +8,8 @@
 ###################
 # DEFINE VERSIONS #
 ###################
-latestPy2=2.7.15
-latestPy3=3.7.1
+latestPy2=2.7.16
+latestPy3=3.7.3
 
 ###################
 # CHECK ARGUMENTS #
