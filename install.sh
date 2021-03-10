@@ -9,7 +9,7 @@
 # DEFINE VERSIONS #
 ###################
 latestPy2=2.7.16
-latestPy3=3.7.3
+latestPy3=3.9.2
 
 ###################
 # CHECK ARGUMENTS #
