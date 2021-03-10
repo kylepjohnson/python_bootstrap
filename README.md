@@ -3,10 +3,16 @@
 
 About
 -----
-This is a shell script for an automated build of the latest version of Python 2 or 3 on the latest LTS version of Ubuntu (currently, 18.04). All prerequisite software is installed and all default Python features are enabled.
+This is a shell script for an automated build of Python 2 or 3 on a recent LTS release of Ubuntu. All requisite software is installed and all default Python features are enabled.
 
 Use
 ---
+
+``` bash
+curl -L https://github.com/kylepjohnson/python_bootstrap/raw/master/install.sh | bash
+```
+
+Or:
 
 ``` bash
 curl -O https://raw.githubusercontent.com/kylepjohnson/python_bootstrap/master/install.sh

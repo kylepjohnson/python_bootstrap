@@ -75,6 +75,7 @@ sudo apt-get -y install libsqlite3-dev
 sudo apt-get -y install libgdbm-dev
 sudo apt-get -y install tk8.5-dev
 sudo apt-get -y install libffi-dev
+sudo apt-get -y install zlib1g-dev
 
 ################
 # BUILD PYTHON #
